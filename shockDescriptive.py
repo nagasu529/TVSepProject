@@ -49,7 +49,7 @@ def categorize_shock(shock):
     if shock in ['Drought','Flooding of agricultural land','Pests and Livestock diseases','Storm']:
         return "agricultural"
     elif shock in ['Illness of household member','Death of household member','Accident',
-             'Household member left the household','Other, specify']:
+             'Household member left the household']:
         return "demographic"
     elif shock in ['House damage','Job loss','Flooding on the house/homestead','being cheated at work/business'
              ,'Collapse of business','Strong increase of prices for Input','Strong decrease of prices for Output',
