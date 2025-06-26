@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Read the .dta file (BSRU PC, MSI Claw, Home PC)
-file_path = "C:/Users/kitti/TVSepData/shocks.dta"
+#file_path = "C:/Users/kitti/TVSepData/shocks.dta"
 #file_path = "C:/Users/kitti/TVSepData/shocks_detail.dta"
 #file_path = "C:/Users/kitti/TVSepData/ShockData/TVSEP2022SurveyV1.dta"
 
@@ -11,6 +11,11 @@ file_path = "C:/Users/kitti/TVSepData/shocks.dta"
 #file_path = "C:/Users/Admin/TVSepData/ShockData/shocks.dta"
 #file_path = "C:/Users/Admin/TVSepData/ShockData/shocks_detail.dta"
 #file_path = "C:/Users/Admin/TVSepData/ShockData/TVSEP2022SurveyV1.dta"
+
+# Read the .dta file (BSRU PC)
+#file_path = "E:/ExportFiles/stataFiles/shocks.dta"
+#file_path = "E:/ExportFiles/stataFiles/shocks_detail.dta"
+file_path = "E:/ExportFiles/stataFiles/TVSEP2022SurveyV1.dta"
 data = pd.read_stata(file_path)
 
 # Display the first few rows
@@ -39,7 +44,7 @@ print(column_names)
 # %%
 #Export data to .csv files.
 #data.to_csv("C:/Full_2007_TH.csv")
-data.to_csv("D:/ExportFiles/shocks.csv")
+data.to_csv("E:/ExportFiles/TVSEP2022SurveyV1.csv")
 
 # %%
 

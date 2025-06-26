@@ -11,8 +11,8 @@ import statsmodels.stats.multicomp as mc
 
 #%%
 # Load the dataset
-shocks = pd.read_csv("D:/ExportFiles/shocks.csv")     
-shocks_detail = pd.read_csv("D:/ExportFiles/shocks_detail.csv")      
+shocks = pd.read_csv("E:/ExportFiles/shocks.csv")     
+shocks_detail = pd.read_csv("E:/ExportFiles/shocks_detail.csv")      
 shocks.head()
 print(len(shocks))
 # %%
@@ -22,11 +22,17 @@ shock_counts = shocks['typeshock'].value_counts()
 shocks_id = shocks_detail['shocks__id'].value_counts()
 print(shocks_id)
 print(shock_counts)
+print(sum(shock_counts))
+print(sum(shocks_id))
+
+#csv export for shocks_id and shocks_checking
+shock_counts.to_csv("E:/ExportFiles/shock_counts.csv")
+shocks_id.to_csv("E:/ExportFiles/shocks_id.csv")
+
 
 
 # %%
 a = [11,21,10,1,22,63,55,2,24,6,5,62,77,2,46,18,90,8,70]
-print(a)
 b = ['Drought','Strong decrease of prices for Output','Flooding of agricultural land','Strong increase of prices for Input',
              'Illness of household member','Pests and Livestock diseases','Storm','Death of household member','Accident','House damage',
              'Had to spent money because of ceremony','Job loss','Flooding on the house/homestead','Household member left the household',
